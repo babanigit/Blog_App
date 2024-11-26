@@ -7,6 +7,10 @@ import 'package:flutter/material.dart';
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
+  static route() => MaterialPageRoute(
+        builder: (context) => const SignUpPage(),
+      );
+
   @override
   _SignUpPageState createState() => _SignUpPageState();
 }
@@ -28,7 +32,7 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(),
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Form(
@@ -68,7 +72,9 @@ class _SignUpPageState extends State<SignUpPage> {
               const SizedBox(
                 height: 20,
               ),
-              const AuthGradientButton(),
+              const AuthGradientButton(
+                buttonText: 'Sign Up',
+              ),
               const SizedBox(
                 height: 20,
               ),
